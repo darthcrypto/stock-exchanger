@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-stocks-berkshire',
+    selector: 'app-berkshire',
     templateUrl: './berkshire.component.html'
 })
 
