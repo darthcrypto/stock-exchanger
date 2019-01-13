@@ -8,10 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatCardModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { BerkshireComponent } from './stocks/berkshire/berkshire.component';
+import { AmazonComponent } from './stocks/amazon/amazon.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, BerkshireComponent
+    AppComponent, HeaderComponent, BerkshireComponent, AmazonComponent
   ],
   imports: [
     BrowserModule,
