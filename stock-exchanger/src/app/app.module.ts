@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule, MatCardModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatButtonModule, MatInputModule, MatExpansionModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { BerkshireComponent } from './stocks/berkshire/berkshire.component';
 import { AmazonComponent } from './stocks/amazon/amazon.component';
@@ -35,7 +35,9 @@ import { VooComponent } from './stocks/voo/voo.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
