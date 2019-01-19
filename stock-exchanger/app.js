@@ -3,10 +3,15 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var apiRouter = require('./routes/book');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost:27017/stockdb')
+    .then(() => console.log('connection successful'))
+    .catch((err) => console.error(err));
 
 app.use(logger('dev'));
 app.use(express.json());
