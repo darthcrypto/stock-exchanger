@@ -65,6 +65,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -72,9 +74,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatInputModule,
     MatExpansionModule,
-    RouterModule.forRoot(appRoutes),
-    FormsModule,
-    HttpClientModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
