@@ -1,14 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule, MatCardModule, MatButtonModule, MatInputModule, MatExpansionModule } from '@angular/material';
+import { 
+   MatPaginatorModule,
+   MatProgressSpinnerModule,
+   MatSortModule,
+   MatTableModule,
+   MatIconModule,
+   MatFormFieldModule,
+   MatToolbarModule,
+   MatCardModule, 
+   MatButtonModule, 
+   MatInputModule,
+   MatExpansionModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { BerkshireComponent } from './stocks/berkshire/berkshire.component';
 import { AmazonComponent } from './stocks/amazon/amazon.component';
@@ -70,6 +81,13 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
     MatInputModule,
