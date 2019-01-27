@@ -3,6 +3,10 @@ init
 resource:
 https://www.djamware.com/post/5b00bb9180aca726dee1fd6d/mean-stack-angular-6-crud-web-application
 
+#mac port killer
+lsof -nP -i4TCP:3000
+lsof -nP -i4TCP:4200
+
 #starting mongodb
 mongod -dbpath /tmp/stockdb
 
