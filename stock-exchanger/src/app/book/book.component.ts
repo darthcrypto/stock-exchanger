@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import  { ApiService } from '../api.service';
 
+import { DataSource } from '@angular/cdk/collections';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -10,6 +13,8 @@ import  { ApiService } from '../api.service';
 export class BookComponent implements OnInit {
 
   books: any;
+  displayColumns = ['isbn', 'title', 'author'];
+  dataSource = new BookDataSource(this.api);
   
   constructor(private api: ApiService) { }
 
@@ -22,5 +27,18 @@ export class BookComponent implements OnInit {
         console.log(err);
       });
   }
+
+}
+
+export class BookDataSource extends DataSource<any> {
+  constructor(private api: ApiService) {
+    super()
+  }
+
+  connect() {
+    return this.api.getBooks();
+  }
+
+  disconnect() {}
 
 }
