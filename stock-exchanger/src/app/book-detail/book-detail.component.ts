@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../api.service';
+
 @Component({
   selector: 'app-book-detail',
   templateUrl: './book-detail.component.html',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDetailComponent implements OnInit {
 
-  constructor() { }
+  book = {};
+
+  constructor(private route: ActivatedRoute, private api: ApiService) { }
+
+  getBookDetails(id) {
+    this.api.getBook(id)
+      .subscribe(data => {
+        console.log(data);
+        this.book = data;
+      });
+  }
 
   ngOnInit() {
+    this.getBookDetails(this.route.snapshot.params['id']);
   }
 
 }
